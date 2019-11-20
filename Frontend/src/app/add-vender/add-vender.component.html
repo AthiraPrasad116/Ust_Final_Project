@@ -1,0 +1,85 @@
+
+
+ <!-- //venderName,address,location,service,pincode,isActive,contactId,contName,department,email,phoneNo -->
+
+<br>
+<div class="container" style="width: 800px;">
+    <h2 class="d-flex justify-content-center">NEW UST VENDER</h2>
+    <br>
+    <br>
+    <hr>
+    <button type="button" class="btn btn-primary" (click) ="Back()">BACK</button>
+    <br>
+    <br>
+
+    
+    <section id="cover">
+           
+    <div class="form-group row">
+        <label for="example-text-input" class="col-3 col-form-label">Vender Name :</label>
+        <div class="col-9">
+            <input class="form-control" type="text" [(ngModel)]="vender.venderName" name="venderName">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="example-text-input" class="col-3 col-form-label">Address :</label>
+        <div class="col-9">
+            <input class="form-control" type="text" [(ngModel)]="vender.address" name="address">
+        </div>
+    </div>
+    <div class="form-group row">
+            <label for="example-text-input" class="col-3 col-form-label">Location :</label>
+            <div class="col-9">
+                <input class="form-control" [(ngModel)]="vender.location" type="location" name="address" >
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-text-input" class="col-3 col-form-label">Services :</label>
+            <div class="col-9">
+                <select class="form-control" type="text" [(ngModel)]="vender.service" name="service">
+                <option disabled>Select Service</option>
+                <option>Soft-skill</option>
+                <option>Technology</option>
+                <option>Management</option>
+                </select>
+            </div>  
+        </div>
+                <div class="form-group row">
+                <label for="example-datetime-local-input" class="col-3 col-form-label">Pincode :</label>
+                <div class="col-9">
+                    <input class="form-control" [(ngModel)]="vender.pincode" type="text" name="pincode" >
+                </div>
+        </div>
+
+    <div class="form-group row">
+            <label for="example-datetime-local-input" class="col-3 col-form-label">Contact Person :</label>
+            <div class="col-9">
+                <input class="form-control" [(ngModel)]="vender.contName" type="text" name="contName">
+            </div>
+        </div>             
+    
+
+   
+    <div class="form-group row">
+        <label for="example-text-input" class="col-3 col-form-label">Department :</label>
+        <div class="col-9">
+            <input class="form-control" type="text" [(ngModel)]="vender.department" name="department">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="example-tel-input" class="col-3 col-form-label">Email :</label>
+        <div class="col-9">
+            <input class="form-control" type="text" [(ngModel)]="vender.email" name="email">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="example-tel-input" class="col-3 col-form-label">Phone no :</label>
+        <div class="col-9">
+            <input class="form-control" type="text" [(ngModel)]="vender.phoneNo" name="phoneNo">
+        </div>
+    </div>
+    
+    <button type="button" class="btn btn-success" (click)="saveVendors()">SAVE</button>
+    </section>
+    </div>

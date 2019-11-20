@@ -1,0 +1,66 @@
+<br>
+
+<br>
+<div>
+<h1 class="d-flex justify-content-center"><b>Ust Vendor List</b></h1>
+<br>
+<br>
+
+
+ <div>
+    <br>
+    
+        <button class="btn btn-success" (click) ="Logout()">Logout</button>
+
+        <input [(ngModel)]="searchString" class="control-label" type="search" placeholder="Search" aria-label="Search" style="width: 35%; height:38px; margin-left:20%;">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button (click)="SearchVendor(searchString)" class="btn btn-success" type="submit" style="margin-right:30%">Search</button>
+
+        <br>
+        <br>
+        <br>
+        <table class="table table-striped">
+            <thead class="thead-grey">
+            <tr>
+                    <th>Vender Name</th>
+                    <th>Address</th>
+                    <th>Location</th>
+                    <th>Sevices</th>
+                    <th>Pincode</th>
+                    <th>Contact Person</th>
+                    <th>Department</th> 
+                    <th>Email</th> 
+                    <th>Phone No</th>
+                    <th>Actions</th>      
+
+            </tr>
+                </thead>
+                
+                <!-- //venderName,address,location,service,pincode,isActive,contactId,contName,department,email,phoneNo -->
+
+                   
+                        <tr *ngFor="let vender of venders">
+                                <td>{{vender.venderName}}</td>
+                                <td>{{vender.address}}</td>
+                                <td>{{vender.location}}</td>
+                                <td>{{vender.service}}</td>
+                                <td>{{vender.pincode}}</td>
+                                <td>{{vender.contName}}</td>
+                                <td>{{vender.department}}</td> 
+                                <td>{{vender.email}}</td>
+                                <td>{{vender.phoneNo}}</td>
+                                <td><button class="btn btn-success" (click) = "editVender(vender.venderId)">Edit</button> | <button type="button" class="btn btn-primary" (click)=" disableVender(vender.venderId)">Disable</button></td>                     
+                    </tr>            
+        </table>
+
+        
+        <br>
+
+        <button class="btn btn-success" (click) ="addVender()">Add</button>
+
+    </div>
+     
+</div>
+
+
+
